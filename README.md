@@ -7,6 +7,7 @@ This project contains a Node.js script that reads a text file synchronously and 
 ## Files
 
 - `syncRead1.js`: The Node.js script that reads a file and counts the vowels.
+- `syncRead2.js`: The Node.js script that reads a file and counts the vowels using a separate function.
 - `sample.txt`: A sample text file containing a paragraph for testing the script.
 
 ## Requirements
@@ -22,7 +23,7 @@ This project contains a Node.js script that reads a text file synchronously and 
    cd Vowel_Counting
    ```
 
-2. **Run the script**:
+2. **Run the script `syncRead1.js`**:
 
    ```bash
    node syncRead1.js sample.txt
@@ -30,11 +31,26 @@ This project contains a Node.js script that reads a text file synchronously and 
 
    This command will execute the script and count the number of vowels in `sample.txt`.
 
+3. **Run the script `syncRead2.js`**:
+
+   ```bash
+   node syncRead2.js sample.txt
+   ```
+
+   This command will execute the script and count the number of vowels in sample.txt using the vowelCount function.
+
 ## Script Details
 
+### syncRead1.js
 - The script reads the content of a file provided as a command-line argument.
 - It converts the content to lowercase and iterates through each character.
 - It counts the characters that are vowels (`a`, `e`, `i`, `o`, `u`).
+- Finally, it prints the number of vowels in the file.
+
+### syncRead2.js
+- The script reads the content of a file provided as a command-line argument.
+- It defines a function called `vowelCount` that takes a string and counts the vowels.
+- It calls the `vowelCount` function after reading the file content.
 - Finally, it prints the number of vowels in the file.
 
 ## Error Handling
